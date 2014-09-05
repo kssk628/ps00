@@ -1,3 +1,5 @@
-Date	Who		Start	Stop	Interruptions	Question		TimeOnTask	Comments
-9/1		KSSK	16:03	17:09					Prepare laptop	66			Most time taking was downloading DrRacket
+Date	Who		Start	Stop	Interruptions	Question			TimeOnTask	Comments
+9/1		KSSK	16:03	17:09					Prepare laptop		66			Most time taking was downloading DrRacket
 ======================== committing to git: 9/5 15:07 =========================
+9/5		KSSK	15:21	15:39	10				Till problem 2		5			Read through till the first two exercises and did some experimentation
+======================== committing to git: 9/5 15:39 =========================
