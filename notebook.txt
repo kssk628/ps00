@@ -3,3 +3,5 @@ Date	Who		Start	Stop	Interruptions	Question			TimeOnTask	Comments
 ======================== committing to git: 9/5 15:07 =========================
 9/5		KSSK	15:21	15:39	10				Till problem 2		5			Read through till the first two exercises and did some experimentation
 ======================== committing to git: 9/5 15:39 =========================
+9/5		KSSK	16:00	16:50	10				From 3 to 10		40			Read the material, did the questions numbers 3 through 10
+======================== committing to git: 9/5 16:50 ==========================
