@@ -1,16 +1,17 @@
 ;; The first three lines of this file were inserted by DrRacket. They record metadata
 ;; about the language level of this file in a form that our tools can easily process.
 #reader(lib "htdp-beginner-reader.ss" "lang")((modname ps00) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f ())))
+(require 2htdp/image)
 ; Exercise question 1
 (* 366 24 60 60)                   ; direct calculation
 (+ (* 365 24 60 60) (* 24 60 60))  ; calculate for normal year and then add one more day
 (+ (* 7 31 24 60 60) (* 4 30 24 60 60) (* 29 24 60 60))        ; seven months with 31 days, four with 30 and February with 29 days; most rudimentary
 ""
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Exercise question 2
 (> (/ 100 3) (/ (+ 100 3) (+ 3 3)))
 ""
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Exercise question 3
 ; f->c : Number -> Number
 ; GIVEN: a temperature in degrees Fahrenheit as an argument
@@ -27,7 +28,7 @@
 (c->f 37.777777777777)
 (c->f 29.444444444444)
 ""
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Exercise question 4
 ; tip : NonNegNumber Number[0.0,1.0] -> Number
 ; GIVEN: the amount of the bill in dollars and the percentage of tip
@@ -40,7 +41,7 @@
 (tip 20 0.17)
 (tip 23 0.89)
 ""
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Exercise question 5
 ; sq : Number -> Number
 ; GIVEN:  number whose square is to be found
@@ -53,7 +54,7 @@
 (sq 13)
 (sq -5)
 ""
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Exercise question 6
 ; quadratic-root : Number Number Number -> Number
 ; GIVEN: the three coefficients of the quadratic equation
@@ -67,7 +68,7 @@
 (quadratic-root 1 5 5)
 (quadratic-root 1 1 1)
 ""
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Exercise question 7
 ; circumference : Number -> Number
 ; GIVEN: the radius r of a circle 
@@ -80,7 +81,7 @@
 (circumference 0)
 (circumference 5)
 ""
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Exercise question 8
 ; circle-area : Number -> Number
 ; GIVEN: the radius of a circle
@@ -94,7 +95,7 @@
 (circle-area 5)
 (circle-area 7)
 ""
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Exercise question 9
 ; my-even? : Number -> Boolean
 ; GIVEN: a number to determine if its even or not
@@ -108,7 +109,7 @@
 (my-even? -5)
 (my-even? 3)
 ""
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Exercise question 10
 ; larger-addition : Number Number Number -> Number
 ; GIVEN: three numbers
@@ -121,11 +122,75 @@
 (larger-addition -1 -2 -3)
 (larger-addition -1 -2 3)
 ""
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Exercise question 11
-
+(define-struct point (x y))
+; make-point : Nummber Number -> Point
+; point? : Point -> Boolean
+; point-x : Point -> Number
+; point-y : Point -> Number
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Exercise question 12
-
+(make-point 5 3)                ; (make-point 5 3)
+(point? 5)                      ; false
+(point? true)                   ; false
+(point? (make-point 2 1))       ; true
+(point-x (make-point 8 5))      ; 8
+(point-y (make-point 42 15))    ; 15
+""
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Exercise question 13
-
+; (make-point true false) will create the sturct where the first value of the sturct is always true and the second is always false
+; The result of (point-x (make-point true false)) is true
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Exercise question 14
+(define-struct student (id name major))
+; (make-student id name major)
+; (student? something)
+; (student-id something)
+; (student-name something)
+; (student-major something)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Exercise question 15
+; (define-struct student (id name major))
+; A Student is a (make-student Number String String)
+; It represents the ID, Name and Major of the student
+; Interpretation:
+;    id = the enrollment ID of the student
+;    name = name of the student record
+;    major = the field in which the student is majoring in
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Exercise question 16
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Exercise question 17
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Exercise question 18
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Exercise question 19
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Exercise question 20
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Exercise question 21
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Exercise question 22
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Exercise question 23
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Exercise question 24
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Exercise question 25
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Exercise question 26
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Exercise question 27
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Exercise question 28
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Exercise question 29
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Exercise question 30
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Exercise question 31
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Exercise question 32
