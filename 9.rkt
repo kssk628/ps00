@@ -8,8 +8,7 @@
 ; Examples:
 ; (my-even? 2)  => true
 ; (my-even? -5) => false
-(define (my-even? n)
-  (if (= (modulo n 2) 0) true false))
+(define (my-even? n) (= (modulo n 2) 0))
 (my-even? 2)
 (my-even? -5)
 (my-even? 3)
